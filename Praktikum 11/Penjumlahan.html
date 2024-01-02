@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Jumlah 2 Bilangan</title>
+</head>
+<body>
+    <h2>Menghitung Jumlah 2 Bilangan</h2>
+    <hr>
+    <label for="bilangan1"></label>
+    <input type="number" id="bilangan1" onchange="Jumlah()">
+    <h2>+</h2>
+    <label for="bilangan2"></label>
+    <input type="number" id="bilangan2" onchange="Jumlah()">
+    <h2>=</h2>
+    <p>
+        <span id="hasil">0</span>
+    </p>
+
+    <script>
+        function Jumlah() {
+            let bilangan1 = document.getElementById("bilangan1").value;
+            let bilangan2 = document.getElementById("bilangan2").value;
+
+            let hasil = Number(bilangan1) + Number(bilangan2);
+            let hasil2 = document.getElementById("hasil");
+            hasil2.innerHTML = hasil;
+
+        }
+    </script>
+</body>
+</html>

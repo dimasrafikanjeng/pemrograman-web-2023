@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="../assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Mesin Cuci</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/breadcrumbs/">
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="bootstrap-5.3.2-examples/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+    <style>
+      .breadcrumb-chevron {
+  --bs-breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236c757d'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  gap: .5rem;
+}
+.breadcrumb-chevron .breadcrumb-item {
+  display: flex;
+  gap: inherit;
+  align-items: center;
+  padding-left: 0;
+  line-height: 1;
+}
+.breadcrumb-chevron .breadcrumb-item::before {
+  gap: inherit;
+  float: none;
+  width: 1rem;
+  height: 1rem;
+}
+
+.breadcrumb-custom .breadcrumb-item {
+  position: relative;
+  flex-grow: 1;
+  padding: .75rem 3rem;
+}
+.breadcrumb-custom .breadcrumb-item::before {
+  display: none;
+}
+.breadcrumb-custom .breadcrumb-item::after {
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  z-index: 1;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  content: "";
+  background-color: var(--bs-tertiary-bg);
+  border-top-right-radius: .5rem;
+  box-shadow: 1px -1px var(--bs-border-color);
+  transform: scale(.707) rotate(45deg);
+}
+.breadcrumb-custom .breadcrumb-item:first-child {
+  padding-left: 1.5rem;
+}
+.breadcrumb-custom .breadcrumb-item:last-child {
+  padding-right: 1.5rem;
+}
+.breadcrumb-custom .breadcrumb-item:last-child::after {
+  display: none;
+}
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+  
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+      #foto-background {
+      background-image: url(https://i.pinimg.com/564x/d5/8a/81/d58a816d372cb23db279b1fa8cfcd3c2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 500px;
+    }
+    #foto {
+      background: transparent;
+      backdrop-filter: blur(30px);
+    }
+    </style>
+
+
+    <link href="breadcrumbs.css" rel="stylesheet">
+  </head>
+  <body id="foto-background">
+
+
+    
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="house-door-fill" viewBox="0 0 16 16">
+    <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+  </symbol>
+</svg>
+
+<div class="container my-5">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-custom overflow-hidden text-center border rounded-3" id="foto">
+      <li class="breadcrumb-item">
+        <a class="link-body-emphasis fw-semibold text-decoration-none text-light" href="Responsive Web Design.html">
+          <svg class="bi" width="16" height="16"><use xlink:href="#house-door-fill"></use></svg>
+          Home
+        </a>
+      </li>
+      <li class="breadcrumb-item">
+       <p class="text-capitalize fw-bold text-light ">Mesin Cuci</p>
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+  <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+    <div class="col">
+      <div class="card h-100">
+        <a href="#" data-toggle="modal" data-target="#gambarModal">
+          <img src="https://cdn1-production-images-kly.akamaized.net/Q49QQpan71_eDOXmU7rbCdU6D1Q=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3252700/original/070732500_1601373445-washing-machine-2668472_1920.jpg" alt="Deskripsi Gambar" class="img-fluid">
+      </a>
+        <div class="card-body">
+          <h5 class="card-title">Washing Machine Thebe</h5>
+          <p class="card-text">Rp5.999.000</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated 10 months ago</small>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="gambarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-body">
+                  <img src="https://cdn1-production-images-kly.akamaized.net/Q49QQpan71_eDOXmU7rbCdU6D1Q=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3252700/original/070732500_1601373445-washing-machine-2668472_1920.jpg" alt="Deskripsi Gambar" class="img-fluid">
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+    <div class="col">
+      <div class="card h-100">
+        <a href="#" data-toggle="modal" data-target="#gambarModa2">
+          <img src="https://i.pinimg.com/564x/d6/7e/ee/d67eee67b5a9b220700981559695e7ee.jpg" alt="Deskripsi Gambar" class="img-fluid">
+      </a>
+        <div class="card-body">
+          <h5 class="card-title">Washing Machine Enceladus</h5>
+          <p class="card-text">Rp3.999.000</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated 12 months ago</small>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="gambarModa2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-body">
+                  <img src="https://i.pinimg.com/564x/d6/7e/ee/d67eee67b5a9b220700981559695e7ee.jpg" alt="Deskripsi Gambar" class="img-fluid">
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+   
+  <div class="col">
+    <div class="card h-100">
+      <a href="#" data-toggle="modal" data-target="#gambarModa3">
+        <img src="https://i.pinimg.com/564x/37/14/47/3714470b9043765d06fdaadbed09bd61.jpg" alt="Deskripsi Gambar" class="img-fluid">
+    </a>
+      <div class="card-body">
+        <h5 class="card-title">Washing Machine Titan</h5>
+        <p class="card-text">Rp7.999.000</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 6 months ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="gambarModa3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="https://i.pinimg.com/564x/37/14/47/3714470b9043765d06fdaadbed09bd61.jpg" alt="Deskripsi Gambar" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="bootstrap-5.3.2-examples/assets/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

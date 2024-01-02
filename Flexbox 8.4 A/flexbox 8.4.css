@@ -1,0 +1,52 @@
+body {
+    display:flex;
+    flex-direction: row;
+}
+
+nav {
+    background-color:blue;
+    width:100px;
+    height:600px;
+    text-align:center;
+}
+
+.container {
+    display:flex;
+    flex-direction:column;
+}
+
+.container header {
+     background-color:brown;
+     width:1250px;
+     height:100px;
+     text-align:center;
+}
+
+.ArticleAside {
+    display:flex;
+    flex-direction:row;
+}
+
+.ArticleAside Article {
+        background-color: beige;
+        width:800px;
+        height:430px;
+        align-items:center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.ArticleAside Aside {
+    background-color: mediumorchid;
+    display: flex;
+    width:450px;
+    height:430px;
+    justify-content: center;
+}
+
+.container footer {
+    background-color: gold;
+    height: 70px;
+    text-align: center;
+}

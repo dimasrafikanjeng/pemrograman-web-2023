@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <style>
+        body {
+            background-color: cadetblue;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<script>
+    function image() {
+        let pilih = document.getElementById("gambar").value;
+        let gambarpilih = document.getElementById("gambarpilih");
+
+        if (pilih == "image 1") {
+            gambarpilih.src = "Image/Foto 1.jpg";
+            alert("ini foto pertama");
+        } else if (pilih == "image 2") {
+            gambarpilih.src = "Image/Foto 2.jpg";
+            alert("ini foto kedua");
+        } else if (pilih == "image 3") {
+            gambarpilih.src = "Image/Foto 3.jpg";
+            alert("ini foto ketiga");
+        } else if (pilih == "image 4") {
+            gambarpilih.src = "Image/Foto 4.jpg";
+            alert("ini foto keempat");
+        } else if (pilih == "image 5") {
+            gambarpilih.src = "Image/Foto 5.jpg";
+            alert("ini foto kelima");
+        } else if (pilih == "image 6") {
+            gambarpilih.src = "Image/Foto 6.jpg";
+            alert("ini foto keenam");
+        }
+    }
+</script>
+<body>
+    <label for="gambar">Pilihan Gambar :</label>
+    <select id="gambar" onchange="image()">
+        <option>Pilihan Gambar</option>
+        <option id="img1">image 1</option>
+        <option id="img2">image 2</option>
+        <option id="img3">image 3</option>
+        <option id="img4">image 4</option>
+        <option id="img5">image 5</option>
+        <option id="img6">image 6</option>
+    </select>
+    <br />
+
+    <img src="" id="gambarpilih" width="300" style="margin-top: 20px;"/>
+
+</body>
+</html>

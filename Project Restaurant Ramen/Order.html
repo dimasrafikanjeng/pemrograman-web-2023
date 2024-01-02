@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light" href="#">Jappans Dims</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="Ramen.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="Daftar Menu .html">Daftar Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="Order.html">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="Fasilitas.html">Fasilitas</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Daftar Cabang
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Cabang Bogor</a></li>
+              <li><a class="dropdown-item" href="#">Cabang Jakarta</a></li>
+              <li><a class="dropdown-item" href="#">Cabang Bekasi</a></li>
+            </ul>
+          <li class="nav-item">
+          </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<form class="m-5">
+  <div class="form-group row">
+    <label for="text" class="col-4 col-form-label">Nama Costumer</label> 
+    <div class="col-8">
+      <input id="text" name="text" placeholder="masukan nama costumer" type="text" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="text1" class="col-4 col-form-label">Nomor Meja</label> 
+    <div class="col-8">
+      <input id="text1" name="text1" placeholder="masukan nomer meja" type="text" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-4">Pilihan Menu</label> 
+    <div class="col-8">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox" id="checkbox_0" type="checkbox" class="custom-control-input" value="Shoyu" required="required"> 
+        <label for="checkbox_0" class="custom-control-label">Shoyu</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox" id="checkbox_1" type="checkbox" class="custom-control-input" value="Kari" required="required"> 
+        <label for="checkbox_1" class="custom-control-label">Kari</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox" id="checkbox_2" type="checkbox" class="custom-control-input" value="Tonkotsu" required="required"> 
+        <label for="checkbox_2" class="custom-control-label">Tonkotsu</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox" id="checkbox_3" type="checkbox" required="required" class="custom-control-input" value="Miso"> 
+        <label for="checkbox_3" class="custom-control-label">Miso</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox" id="checkbox_4" type="checkbox" required="required" class="custom-control-input" value="Shio"> 
+        <label for="checkbox_4" class="custom-control-label">Shio</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox" id="checkbox_5" type="checkbox" required="required" class="custom-control-input" value="Tsukemen"> 
+        <label for="checkbox_5" class="custom-control-label">Tsukemen</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-4">Pilihan Porsi</label> 
+    <div class="col-8">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="radio" id="radio_0" type="radio" class="custom-control-input" value="1"> 
+        <label for="radio_0" class="custom-control-label">1</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="radio" id="radio_1" type="radio" class="custom-control-input" value="2"> 
+        <label for="radio_1" class="custom-control-label">2</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="radio" id="radio_2" type="radio" class="custom-control-input" value="3"> 
+        <label for="radio_2" class="custom-control-label">3</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="radio" id="radio_3" type="radio" class="custom-control-input" value="4"> 
+        <label for="radio_3" class="custom-control-label">4</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="radio" id="radio_4" type="radio" class="custom-control-input" value="5"> 
+        <label for="radio_4" class="custom-control-label">5</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="radio" id="radio_5" type="radio" class="custom-control-input" value="6"> 
+        <label for="radio_5" class="custom-control-label">6</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-4">Pilihan Topping</label> 
+    <div class="col-8">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox1" id="checkbox1_0" type="checkbox" class="custom-control-input" value="Ayam"> 
+        <label for="checkbox1_0" class="custom-control-label">Ayam</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox1" id="checkbox1_1" type="checkbox" class="custom-control-input" value="Beef"> 
+        <label for="checkbox1_1" class="custom-control-label">Beef</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox1" id="checkbox1_2" type="checkbox" class="custom-control-input" value="Jamur"> 
+        <label for="checkbox1_2" class="custom-control-label">Jamur</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox1" id="checkbox1_3" type="checkbox" class="custom-control-input" value="Nori"> 
+        <label for="checkbox1_3" class="custom-control-label">Nori</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox1" id="checkbox1_4" type="checkbox" class="custom-control-input" value="Menma"> 
+        <label for="checkbox1_4" class="custom-control-label">Menma</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox1" id="checkbox1_5" type="checkbox" class="custom-control-input" value="Horenso"> 
+        <label for="checkbox1_5" class="custom-control-label">Horenso</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox1" id="checkbox1_6" type="checkbox" class="custom-control-input" value="Gyoza"> 
+        <label for="checkbox1_6" class="custom-control-label">Gyoza</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-4">Minuman</label> 
+    <div class="col-8">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox2" id="checkbox2_0" type="checkbox" class="custom-control-input" value="Ocha Tea"> 
+        <label for="checkbox2_0" class="custom-control-label">Ocha Tea</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox2" id="checkbox2_1" type="checkbox" class="custom-control-input" value="Orange Juice"> 
+        <label for="checkbox2_1" class="custom-control-label">Orange Juice</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox2" id="checkbox2_2" type="checkbox" class="custom-control-input" value="Milk Tea"> 
+        <label for="checkbox2_2" class="custom-control-label">Milk Tea</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox2" id="checkbox2_3" type="checkbox" class="custom-control-input" value="Chocolate"> 
+        <label for="checkbox2_3" class="custom-control-label">Chocolate</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox2" id="checkbox2_4" type="checkbox" class="custom-control-input" value="Thai Tea"> 
+        <label for="checkbox2_4" class="custom-control-label">Thai Tea</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="checkbox2" id="checkbox2_5" type="checkbox" class="custom-control-input" value="Green Tea"> 
+        <label for="checkbox2_5" class="custom-control-label">Green Tea</label>
+      </div>
+    </div>
+  </div> 
+  <div class="form-group row">
+    <div class="offset-4 col-8">
+      <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+</head>
+<body>
+    <h1>Konversi mata uang dollar menjadi rupiah</h1>
+
+    <label for="dollar">Jumlah Dollar</label>
+    <input type="number" id="dollar" onchange="hitungrupiah()"></input>
+
+    <hr>
+    <p>Rupiah = <span id="rupiah"></span></p>
+
+    <script>
+        function hitungrupiah(){
+            let dollar = document.getElementById("dollar").value;
+
+            //rumus konversi rupiah
+            let rupiah = dollar * 14650
+            console.log("Rupiah =" + "Rp." + rupiah);
+
+            let rupiah2 = document.getElementById("rupiah");
+            rupiah2.innerText = rupiah;
+        }
+    </script>
+</body>
+</html>

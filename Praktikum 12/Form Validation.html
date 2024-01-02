@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        * {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column ;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+
+        h1 {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .button {
+            color: white;
+            background-color: darkred;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        h4 {
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 500px;
+            height: 30px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        #hasil {
+            display: flex;
+            flex-direction: column ;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        body {
+            background-color: rgb(0, 252, 210)
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <div class="main">
+        <div class="form">
+            <h4>Nama Pelanggan</h4>
+            <input type="text" placeholder="Nama Pelanggan" required="required" id="pelanggan" maxlength="30">
+            <h4>Email</h4>
+            <input type="email" placeholder="Email" required="required" id="gmail">
+            <h4>Jam Keberangkatan</h4>
+            <input type="time" required="required" id="waktu">
+            <h4>Tujuan Keberangkatan</h4>
+            <input type="text" placeholder="Tujuan Keberangkatan" required="required" id="tujuan">
+            <h4>Jumlah Tiket</h4>
+            <input type="number" placeholder="Jumlah Tiket" required="required" id="jumlah" min="1" max="10">
+            <br>
+            <button type="submit" class="button" id="submit">Submit</button>
+        </div>
+    </div>
+
+    <div id="hasil"></div>
+
+    <script>
+        const submit = document.getElementById('submit');
+        const hasil = document.getElementById('hasil');
+
+        function validateEmail(elementValue) {      
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            return emailPattern.test(elementValue); 
+        } 
+
+        submit.onclick = () => {
+            let usernamePelanggan = document.getElementById('pelanggan').value;
+            let emailPelanggan = document.getElementById('gmail').value;
+            let waktuPelanggan = document.getElementById('waktu').value;
+            let tujuanPelanggan = document.getElementById('tujuan').value;
+            let tiketPelanggan = document.getElementById('jumlah').value;
+
+            if (usernamePelanggan === '' && emailPelanggan === '' && waktuPelanggan === '' && tujuanPelanggan === '' && tiketPelanggan === '') {
+                alert('Masukkan Data anda!')
+            }
+            
+            else if (usernamePelanggan === '' || usernamePelanggan === null) {
+                    alert('Masukkan Nama anda!')
+            }
+            
+            else if (emailPelanggan === '' || emailPelanggan === null) {
+                    alert('Masukkan Email anda!')
+            }
+
+            else if (waktuPelanggan === '' || waktuPelanggan === null) {
+                    alert('Masukkan Jam Keberangkatan anda!')
+            }
+            
+            else if (tujuanPelanggan === '' || tujuanPelanggan === null) {
+                    alert('Masukkan Tujuan Keberangkatan anda!')
+            }
+            
+            else if (tiketPelanggan === '' || tiketPelanggan === null) {
+                    alert('Masukkan Jumlah Tiket anda!');
+            }
+
+            else if(validateEmail(emailPelanggan) != true) {
+                    alert('Format Email anda salah!');
+            }
+            
+            else {
+            const p = document.createElement('P');
+            hasil.appendChild(p);
+            p.innerHTML =
+                "<p> Nama Pelanggan : " + usernamePelanggan + 
+                "<p> email : " + emailPelanggan  + 
+                "<p> Jam Keberangkatan : " + waktuPelanggan  +
+                "<p> Tujuan : " + tujuanPelanggan  + 
+                "<p> Jumlah Tiket : " + tiketPelanggan;
+            }
+        }
+    </script>
+</body>
+</html>
